@@ -2,24 +2,12 @@ import React from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-// import { Helmet } from "react-helmet";
-// import catAndHumanIllustration from "../images/cat-and-human-illustration.svg";
-import {
-  differenceInYears,
-  differenceInMonths,
-  differenceInDays,
-  isDate,
-  toDate,
-  differenceInMilliseconds,
-} from "date-fns";
+import { Waves } from "../components/waves";
+
+import { differenceInDays } from "date-fns";
 
 function IndexPage() {
   const countdownTimer = () => {
-    console.log(
-      "jjj total date-fns",
-      differenceInDays(new Date(), new Date(2017, 8, 27))
-    );
-
     return differenceInDays(new Date(), new Date(2017, 8, 27));
   };
 
@@ -29,48 +17,53 @@ function IndexPage() {
         keywords={[`jamielockie`, `jamie lockie`, `web developer`]}
         title="Home"
       />
-      {/* <Helmet>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
-          rel="stylesheet"
-        />
-      </Helmet> */}
 
-      <section className="pt-10 lg:pt-32 pb-32 lg:pb-40 max-w-6xl mx-auto px-6 md:px-12">
-        {/* <img
-          alt="Cat and human sitting on a couch"
-          className="block w-1/2 mx-auto mb-8"
-          src={catAndHumanIllustration}
-        /> */}
-        <div className="">
-          <h1
-            className="
-              font-bold
-              leading-snug
-              mb-4
-              p-3
-              pl-0
-              sm:text-4xl
-              text-3xl
-              text-3xl
-              text-gray-900
-              tracking-tight
-            "
-          >
-            {<span className="text-blue-600 pr-2 ">Hey,</span>} {`I'm Jamie`}
-          </h1>
-        </div>
+      <section className=" z-0 pt-64 pb-32 sticky top-0 max-w-6xl hero-height mx-auto px-6 md:px-12">
+        <h1 className=" font-bold leading-snug mb-4 p-3 pl-0 sm:text-4xl text-3xl text-gray-900 tracking-tight ">
+          {<span className="text-primary pr-2 ">Hey,</span>} {`I'm Jamie`}
+        </h1>
 
-        <p className="text-2xl font-semibold tracking-tight leading-snug text-gray-900">
-          {`I've been a full-time professional web developer for `}
-          <span>a few years, now.</span>
-          <span>
-            <span>
-              {` `} {countdownTimer()} days, to be exact.
-            </span>
-          </span>
-        </p>
+        <h2 className="text-2xl font-semibold tracking-normal leading-snug text-gray-900 pb-4">
+          I've been a{" "}
+          <strong className="text-primary font-semibold">
+            full-time professional web developer{" "}
+          </strong>{" "}
+          for a few years, now.
+        </h2>
+        <small className="text-lg block font-semibold tracking-normal leading-snug text-gray-900">
+          ({` `}
+          {countdownTimer()} days, seems to me 🤔 {` `})
+        </small>
       </section>
+      <Waves className="full-bleed z-10" />
+      <div className="bg-primary full-bleed z-10">
+        <div className="wrapper">
+          <section className=" text-md text-lg font-normal leading-relaxed tracking-wide text-white pb-4">
+            <p className="pb-10 font-semibold text-3xl tracking-wider">
+              On <em className="italic">most</em> days, I create JavaScript
+              applications for the web.
+            </p>
+            <p className="pb-10 copy">
+              First and foremost, I am a frontend dev. But I have also worked
+              enough on the backend to know how things fit together. I used to
+              have a portfolio page that showed off things like{" "}
+              <a href="https://friendshrimp-a4c11.firebaseapp.com">
+                {" "}
+                my very first React App.
+              </a>{" "}
+              Don't get me wrong, it's pretty sweet! But it isn't very
+              reflective of my skills now.
+            </p>
+            <p className="pb-10"></p>
+
+            <p>
+              {" "}
+              I created it using Gatsby and Tailwind CSS, so it will be fast and
+              easy on the eyes
+            </p>
+          </section>
+        </div>
+      </div>
     </Layout>
   );
 }

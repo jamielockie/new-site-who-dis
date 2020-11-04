@@ -4,11 +4,36 @@
 /*! purgecss end ignore */
 @tailwind utilities;
 
-html {
-  @apply bg-blue-500;
+
+a {
+  text-decoration: underline solid theme('colors.secondary');
 }
 
 .underline-wavy {
   text-decoration: underline;
   text-decoration-style: wavy;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns:
+    1fr
+    min(65ch, 100%)
+    1fr;
+  
+}
+.wrapper > * {
+  grid-column: 2;
+}
+.full-bleed {
+  width: 100%;
+  grid-column: 1 / 4;
+}
+
+.min-height-75vh {
+  min-height: 75vh;
+}
+
+.bg-gray-gradient {
+  background: linear-gradient(to top, theme('colors.gray.300'), #fff)
 }

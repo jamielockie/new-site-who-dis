@@ -5,12 +5,14 @@ module.exports = {
     fontFamily: {
       display: ["Inter", "sans-serif"],
     },
-    // extend: {
-    //   colors: {
-    //     primary: "#4c51bf",
-    //     background: "#f7fafc",
-    //   },
-    // },
+    extend: {
+      colors: {
+        primary: "hsl(204deg 100% 50%)",
+        primaryLight: "hsl(204deg 100% 70%)",
+        primaryDark: "hsl(204deg 100% 30%)",
+        secondary: "#ff5500",
+      },
+    },
   },
   variants: {},
   // https://github.com/tailwindcss/custom-forms

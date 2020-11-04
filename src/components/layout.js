@@ -5,15 +5,10 @@ import { Footer } from "./footer";
 
 function Layout({ children }) {
   return (
-    <div className="flex bg-gray-100 flex-col min-h-screen font-sans text-gray-900">
-      {/* <Header /> */}
-
-      <main className="flex-1  w-full max-w-4xl px-4 py-8 mx-auto md:px-8 md:py-16">
-        {children}
-      </main>
-
+    <React.Fragment>
+      <main className="wrapper bg-gray-200 text-gray-900">{children}</main>
       <Footer />
-    </div>
+    </React.Fragment>
   );
 }
 

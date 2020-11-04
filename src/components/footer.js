@@ -23,17 +23,17 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-blue-500">
+    <footer className="bg-primary">
       <nav className="flex justify-between items-center max-w-4xl p-4 mx-auto text-sm md:p-8">
         <address className="text-white not-italic flex flex-row items-center">
-          <span className="pl-2 pr-4">jamielockie@gmail.com</span>
+          <span className="pl-2 pr-3">jamielockie@gmail.com</span>
           <button
             onClick={() => {
               navigator.clipboard.writeText("jamielockie@gmail.com");
               setEmailCopied(true);
               setTimesCopied(timesCopied > 5 ? 2 : timesCopied + 1);
             }}
-            className="p-1 rounded-md bg-blue-500 hover:bg-blue-400 transition-colors duration-300"
+            className="p-1 rounded-md bg-primary hover:bg-primaryLight transition-colors duration-300"
           >
             <svg
               fill="none"

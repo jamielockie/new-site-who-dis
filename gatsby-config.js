@@ -20,8 +20,6 @@ module.exports = {
         name: `JamieLockie`,
         short_name: `JamieLockie`,
         start_url: `/`,
-        // background_color: fullConfig.theme.colors.background,
-        // theme_color: fullConfig.theme.colors.primary,
         display: `minimal-ui`,
         icon: `src/images/favicon.png`,
       },
