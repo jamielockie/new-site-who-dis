@@ -18,7 +18,7 @@ a {
   display: grid;
   grid-template-columns:
     1fr
-    min(65ch, 100%)
+    min(65ch, 85%)
     1fr;
   
 }
@@ -30,10 +30,14 @@ a {
   grid-column: 1 / 4;
 }
 
-.min-height-75vh {
-  min-height: 75vh;
+.hero-height {
+  min-height: 65vh;
 }
 
 .bg-gray-gradient {
   background: linear-gradient(to top, theme('colors.gray.300'), #fff)
+}
+
+.bg-blue-gradient {
+  background: linear-gradient(to bottom, theme('colors.primary'), theme('colors.primaryDark'))
 }

@@ -12,9 +12,9 @@ export const Footer = () => {
       case 3:
         return "Copied (again, and again)";
       case 4:
-        return "That's quite enough";
+        return "That's quite enough...";
       case 5:
-        return "Un-copied! (jk, it's copied)";
+        return "Un-copied! (JK, it's copied)";
       case 6:
         return "";
       default:
@@ -23,7 +23,7 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-primary">
+    <footer className="bg-primaryDark">
       <nav className="flex justify-between items-center max-w-4xl p-4 mx-auto text-sm md:p-8">
         <address className="text-white not-italic flex flex-row items-center">
           <span className="pl-2 pr-3">jamielockie@gmail.com</span>
@@ -33,7 +33,7 @@ export const Footer = () => {
               setEmailCopied(true);
               setTimesCopied(timesCopied > 5 ? 2 : timesCopied + 1);
             }}
-            className="p-1 rounded-md bg-primary hover:bg-primaryLight transition-colors duration-300"
+            className="p-1 rounded-md bg-primaryDark hover:bg-primary transition-colors duration-300"
           >
             <svg
               fill="none"

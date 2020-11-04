@@ -2,7 +2,7 @@ import React from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { Waves } from "../components/waves";
+import { Waves } from "../components/Waves";
 
 import { differenceInDays } from "date-fns";
 
@@ -36,17 +36,39 @@ function IndexPage() {
         </small>
       </section>
       <Waves className="full-bleed z-10" />
-      <div className="bg-primary full-bleed z-10">
+
+      <div className="bg-blue-gradient py-48 full-bleed z-10">
         <div className="wrapper">
-          <section className=" text-md text-lg font-normal leading-relaxed tracking-wide text-white pb-4">
-            <p className="pb-10 font-semibold text-3xl tracking-wider">
-              On <em className="italic">most</em> days, I create JavaScript
-              applications for the web.
+          <section className=" text-md text-lg font-normal leading-loose tracking-wide text-white pb-4">
+            <p className="pb-10 font-semibold text-3xl leading-normal tracking-wider">
+              On most days, I build JavaScript applications for the web.
             </p>
             <p className="pb-10 copy">
-              First and foremost, I am a frontend dev. But I have also worked
-              enough on the backend to know how things fit together. I used to
-              have a portfolio page that showed off things like{" "}
+              First and foremost, I am a frontend dev. That being said, I've
+              worked enough on the backend to know how things fit together. I am
+              also a Lead Instructor at
+              <a
+                href="https://junocollege.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {" "}
+                Juno College
+              </a>{" "}
+              and a Mentor at{" "}
+              <a
+                href="https://www.canadalearningcode.ca/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {" "}
+                Canada Learning Code
+              </a>
+              .
+            </p>
+
+            <p>
+              I used to have a portfolio page that showed off things like{" "}
               <a
                 href="https://friendshrimp-a4c11.firebaseapp.com"
                 target="_blank"
@@ -56,14 +78,26 @@ function IndexPage() {
                 my very first React App.
               </a>{" "}
               Don't get me wrong, it's pretty sweet! But it isn't very
-              reflective of my skills now.
+              reflective of my skills now. So I created{" "}
+              <em className="italic">this</em> *gestures vaguely around the
+              webpage*. It's a simple, fast, beautiful website for me to enjoy
+              building — and for you to enjoy visiting. Sounds nice, right?
             </p>
             <p className="pb-10"></p>
 
-            <p>
+            <p className="pb-10">
               {" "}
-              I created it using Gatsby and Tailwind CSS, so it will be fast and
-              easy on the eyes
+              I created it using Gatsby (💨) and Tailwind CSS (💅).
+            </p>
+
+            <p>
+              If you'd like to get in touch, all you have to do is{" "}
+              <span className="line-through italic">
+                {" "}
+                smash that like button
+              </span>{" "}
+              grab my email below, and give me a shout (just don't copy it more
+              than once 😏).
             </p>
           </section>
         </div>
