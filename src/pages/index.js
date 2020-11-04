@@ -47,7 +47,11 @@ function IndexPage() {
               First and foremost, I am a frontend dev. But I have also worked
               enough on the backend to know how things fit together. I used to
               have a portfolio page that showed off things like{" "}
-              <a href="https://friendshrimp-a4c11.firebaseapp.com">
+              <a
+                href="https://friendshrimp-a4c11.firebaseapp.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {" "}
                 my very first React App.
               </a>{" "}
