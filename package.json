@@ -4,6 +4,7 @@
   "version": "4.0.0",
   "author": "Jamie Lockie <jamielockie@gmail.com>",
   "dependencies": {
+    "date-fns": "^2.16.1",
     "gatsby": "2.24.45",
     "gatsby-plugin-manifest": "2.4.22",
     "gatsby-plugin-offline": "3.2.23",

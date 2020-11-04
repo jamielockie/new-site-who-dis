@@ -4,8 +4,25 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 // import { Helmet } from "react-helmet";
 // import catAndHumanIllustration from "../images/cat-and-human-illustration.svg";
+import {
+  differenceInYears,
+  differenceInMonths,
+  differenceInDays,
+  isDate,
+  toDate,
+  differenceInMilliseconds,
+} from "date-fns";
 
 function IndexPage() {
+  const countdownTimer = () => {
+    console.log(
+      "jjj total date-fns",
+      differenceInDays(new Date(), new Date(2017, 8, 27))
+    );
+
+    return differenceInDays(new Date(), new Date(2017, 8, 27));
+  };
+
   return (
     <Layout>
       <SEO
@@ -40,13 +57,18 @@ function IndexPage() {
               tracking-tight
             "
           >
-            {<span className="text-teal-700">Hey, </span>} I&#39;m Jamie
+            {<span className="text-blue-600 pr-2 ">Hey,</span>} {`I'm Jamie`}
           </h1>
         </div>
 
         <p className="text-2xl font-semibold tracking-tight leading-snug text-gray-900">
-          {`I've been a professional web developer for `}
-          <span className="underline-wavy">a few years, now.</span>
+          {`I've been a full-time professional web developer for `}
+          <span>a few years, now.</span>
+          <span>
+            <span>
+              {` `} {countdownTimer()} days, to be exact.
+            </span>
+          </span>
         </p>
       </section>
     </Layout>
