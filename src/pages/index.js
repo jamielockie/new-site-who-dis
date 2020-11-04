@@ -18,12 +18,12 @@ function IndexPage() {
         title="Home"
       />
 
-      <section className=" z-0 pt-64 pb-32 sticky top-0 max-w-6xl hero-height mx-auto px-6 md:px-12">
-        <h1 className=" font-bold leading-snug mb-4 p-3 pl-0 sm:text-4xl text-3xl text-gray-900 tracking-tight ">
-          {<span className="text-primary pr-2 ">Hey,</span>} {`I'm Jamie`}
+      <section className=" z-0 pt-40 sm:pt-64 pb-32 sticky top-0 max-w-6xl hero-height mx-auto px-6 md:px-12">
+        <h1 className="font-bold mb-1 p-3 pl-0 sm:text-4xl text-3xl text-gray-900  ">
+          Hey, I'm Jamie
         </h1>
 
-        <h2 className="text-2xl font-semibold tracking-normal leading-snug text-gray-900 pb-4">
+        <h2 className="text-2xl font-semibold text-shadow tracking-normal leading-snug text-gray-900 pb-4">
           I've been a{" "}
           <strong className="text-primary font-semibold">
             full-time professional web developer{" "}
@@ -31,8 +31,7 @@ function IndexPage() {
           for a few years, now.
         </h2>
         <small className="text-lg block font-semibold tracking-normal leading-snug text-gray-900">
-          ({` `}
-          {countdownTimer()} days, seems to me 🤔 {` `})
+          {countdownTimer()} days, I'm pretty sure.
         </small>
       </section>
       <Waves className="full-bleed z-10" />
