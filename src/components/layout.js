@@ -6,7 +6,7 @@ import { Footer } from "./footer";
 function Layout({ children }) {
   return (
     <React.Fragment>
-      <main className="wrapper bg-gray-200 text-gray-900">{children}</main>
+      <main className="wrapper bg-gray-100 text-gray-900">{children}</main>
       <Footer />
     </React.Fragment>
   );
