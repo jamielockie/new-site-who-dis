@@ -26,7 +26,7 @@ export const Footer = () => {
     <footer className="bg-primaryDark">
       <nav className="flex justify-between items-center max-w-4xl p-4 mx-auto text-sm md:p-8">
         <address className="text-white not-italic flex flex-row items-center">
-          <span className="pl-2 pr-3">jamielockie@gmail.com</span>
+          <span className="pl-2 pr-1">jamielockie@gmail.com</span>
           <button
             onClick={() => {
               navigator.clipboard.writeText("jamielockie@gmail.com");
