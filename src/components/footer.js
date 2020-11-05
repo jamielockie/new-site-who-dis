@@ -51,6 +51,7 @@ export const Footer = () => {
                 }
               />
             </svg>
+            <span className="sr-only">Copy Email</span>
           </button>
           <p
             className={`transition duration-300 px-2 italic ${
