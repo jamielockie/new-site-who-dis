@@ -10,6 +10,7 @@ module.exports = {
         primary: "hsl(204deg 100% 50%)",
         primaryLight: "hsl(204deg 100% 70%)",
         primaryDark: "hsl(204deg 100% 30%)",
+        primaryText: "hsl(204deg 100% 38%)",
         secondary: "#ff5500",
       },
     },

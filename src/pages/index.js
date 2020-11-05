@@ -22,9 +22,9 @@ function IndexPage() {
           Hey, I'm Jamie.
         </h1>
 
-        <h2 className="text-2xl font-semibold text-shadow tracking-normal leading-snug text-gray-900 pb-4">
+        <h2 className="text-2xl font-semibold  tracking-normal leading-snug text-gray-900 pb-4">
           I've been a{" "}
-          <strong className="text-primary font-semibold">
+          <strong className="text-primaryText font-semibold">
             full-time professional web developer{" "}
           </strong>{" "}
           for a few years, now.
