@@ -3,7 +3,6 @@ import React, { useState } from "react";
 export const Footer = () => {
   const [isEmailCopied, setEmailCopied] = useState(false);
   const [timesCopied, setTimesCopied] = useState(0);
-  console.log("jjj isEmailCopied", isEmailCopied);
 
   const getSassyText = () => {
     switch (timesCopied) {
@@ -23,10 +22,10 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-primaryDark">
-      <nav className="flex justify-between items-center max-w-4xl p-4 mx-auto text-sm md:p-8">
+    <footer className="bg-primaryDark wrapper pb-6">
+      <nav className="flex justify-between items-center  text-sm ">
         <address className="text-white not-italic flex flex-row items-center">
-          <span className="pl-2 pr-1">jamielockie@gmail.com</span>
+          <span className="pl-2 pr-1 py-6">jamielockie@gmail.com</span>
           <button
             onClick={() => {
               navigator.clipboard.writeText("jamielockie@gmail.com");
@@ -53,20 +52,18 @@ export const Footer = () => {
               />
             </svg>
           </button>
-          {
-            <p
-              className={`transition duration-300 px-2 italic ${
-                isEmailCopied ? "opacity-100" : "opacity-0"
-              }`}
-            >
-              {getSassyText()}
-            </p>
-          }
+          <p
+            className={`transition duration-300 px-2 italic ${
+              isEmailCopied ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            {getSassyText()}
+          </p>
         </address>
 
         <p>
           <a
-            className="font-bold text-white no-underline"
+            className="font-bold text-white no-underline py-3"
             href="https://github.com/jamielockie"
             target="_blank"
             rel="noopener noreferrer"

@@ -15,12 +15,11 @@ function IndexPage() {
     <Layout>
       <SEO
         keywords={[`jamielockie`, `jamie lockie`, `web developer`]}
-        title="Home"
+        title="Jamie Lockie — Web Developer"
       />
-
       <section className=" z-0 pt-40 sm:pt-64 pb-32 sticky top-0 max-w-6xl hero-height mx-auto px-6 md:px-12">
         <h1 className="font-bold mb-1 p-3 pl-0 sm:text-4xl text-3xl text-gray-900  ">
-          Hey, I'm Jamie
+          Hey, I'm Jamie.
         </h1>
 
         <h2 className="text-2xl font-semibold text-shadow tracking-normal leading-snug text-gray-900 pb-4">
@@ -31,21 +30,21 @@ function IndexPage() {
           for a few years, now.
         </h2>
         <small className="text-lg block font-semibold tracking-normal leading-snug text-gray-900">
-          {countdownTimer()} days, I'm pretty sure.
+          {countdownTimer()} days, in fact.
         </small>
       </section>
       <Waves className="full-bleed z-10" />
 
-      <div className="bg-blue-gradient py-48 full-bleed z-10">
+      <section className="bg-blue-gradient pt-32 pb-16 full-bleed z-10">
         <div className="wrapper">
-          <section className=" text-md text-lg font-normal leading-loose tracking-wide text-white pb-4">
+          <div className=" text-md text-lg font-normal leading-loose tracking-wide text-white pb-4">
             <p className="pb-10 font-semibold text-3xl leading-normal tracking-wider">
-              On most days, I build JavaScript applications for the web.
+              On most days, I build modern JavaScript applications for the web.
             </p>
             <p className="pb-10 copy">
-              First and foremost, I am a frontend dev. That being said, I've
+              First and foremost, I am a Front End Dev. That being said, I've
               worked enough on the backend to know how things fit together. I am
-              also a Lead Instructor at
+              a Lead Instructor at
               <a
                 href="https://junocollege.com/"
                 target="_blank"
@@ -98,9 +97,9 @@ function IndexPage() {
               grab my email below, and give me a shout (just don't copy it more
               than once 😏).
             </p>
-          </section>
+          </div>
         </div>
-      </div>
+      </section>
     </Layout>
   );
 }

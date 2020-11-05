@@ -3,12 +3,10 @@ const tailwindConfig = require("./tailwind.config.js");
 
 const fullConfig = resolveConfig(tailwindConfig);
 
-console.log("jjj fullConfig", fullConfig);
-
 module.exports = {
   siteMetadata: {
     title: `Jamie Lockie`,
-    description: `A site for me people to learn about me, while I learn about the web`,
+    description: `My little slice of the interwebs`,
     author: `@jamielockie1`,
   },
   plugins: [
