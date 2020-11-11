@@ -6,6 +6,11 @@ module.exports = {
       display: ["Inter", "sans-serif"],
     },
     extend: {
+      spacing: {
+        "72": "18rem",
+        "84": "21rem",
+        "96": "24rem",
+      },
       colors: {
         primary: "hsl(204deg 100% 50%)",
         primaryLight: "hsl(204deg 100% 70%)",

@@ -1,12 +1,10 @@
 import React from "react";
-
-import Layout from "../components/layout";
 import SEO from "../components/seo";
 // import dogIllustration from "../images/dog-illustration.svg";
 
 function AboutPage() {
   return (
-    <Layout>
+    <React.Fragment>
       <SEO
         keywords={[`jamielockie`, `jamie lockie`, `web developer`]}
         title="About"
@@ -31,7 +29,7 @@ function AboutPage() {
           {/* <img alt="A dog relaxing" src={dogIllustration} /> */}
         </figure>
       </section>
-    </Layout>
+    </React.Fragment>
   );
 }
 

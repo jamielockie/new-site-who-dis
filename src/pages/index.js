@@ -1,23 +1,23 @@
 import React from "react";
 
-import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { Waves } from "../components/waves";
+import { Email } from "../components/email";
 
 import { differenceInDays } from "date-fns";
 
-function IndexPage() {
+function IndexPage(props) {
   const countdownTimer = () => {
     return differenceInDays(new Date(), new Date(2017, 8, 27));
   };
 
   return (
-    <Layout>
+    <React.Fragment>
       <SEO
         keywords={[`jamielockie`, `jamie lockie`, `web developer`]}
         title="Jamie Lockie — Web Developer"
       />
-      <section className=" z-0 pt-40 sm:pt-64 pb-32 sticky top-0 max-w-6xl hero-height mx-auto px-6 md:px-12">
+      <section className="z-0 pt-40 sm:pt-64 pb-32 sticky top-0 max-w-6xl hero-height mx-auto px-6 md:px-12">
         <h1 className="font-bold mb-1 p-3 pl-0 sm:text-4xl text-3xl text-gray-900  ">
           Hey, I'm Jamie.
         </h1>
@@ -33,11 +33,11 @@ function IndexPage() {
           {countdownTimer()} days, in fact.
         </small>
       </section>
-      <Waves className="full-bleed z-10" />
+      <Waves fill="hsl(204deg 100% 50%)" className="full-bleed z-10" />
 
       <section className="bg-blue-gradient pt-32 pb-16 full-bleed z-10">
         <div className="wrapper">
-          <div className=" text-md text-lg font-normal leading-loose tracking-wide text-white pb-4">
+          <div className="text-lg font-normal leading-loose tracking-wide text-white pb-4">
             <p className="pb-10 font-semibold text-3xl leading-normal tracking-wider">
               On most days, I build modern JavaScript applications for the web.
             </p>
@@ -90,17 +90,15 @@ function IndexPage() {
 
             <p>
               If you'd like to get in touch, all you have to do is{" "}
-              <span className="line-through italic">
-                {" "}
-                smash that like button
-              </span>{" "}
-              grab my email below, and give me a shout (just don't copy it more
-              than once 😏).
+              <s className="italic">smash that like button</s> grab my email
+              below, and give me a shout (just don't copy it more than once 😏).
             </p>
+
+            <Email />
           </div>
         </div>
       </section>
-    </Layout>
+    </React.Fragment>
   );
 }
 
