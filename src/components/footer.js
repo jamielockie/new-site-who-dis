@@ -4,15 +4,18 @@ import { Email } from "../components/email";
 
 export const Footer = ({ isHomePage }) => {
   return (
-    <footer className="bg-primaryDark wrapper py-3">
-      {isHomePage ? (
-        <p className="pt-10 text-lg font-normal leading-loose tracking-wide text-white pb-4">
-          Hey! Before you go, want to play a quick <Link to="/games">Game</Link>
-          ?
-        </p>
-      ) : undefined}
+    <footer className="bg-primaryDark wrapper pt-3 pb-6">
       <nav className="flex flex-col items-start justify-between sm:flex-row sm:items-center text-sm ">
-        <Email />
+        {isHomePage ? (
+          <p className=" text-md pb-4 sm:pb-0 sm:text-lg font-normal leading-loose tracking-wide text-white">
+            Hey! Before you go, want to{" "}
+            <span className="whitespace-no-wrap">
+              play a quick <Link to="/games">Game</Link>?
+            </span>
+          </p>
+        ) : (
+          <Email />
+        )}
         <p>
           <a
             className="font-bold text-white no-underline py-3"

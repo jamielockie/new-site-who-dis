@@ -23,7 +23,7 @@ export const Email = () => {
 
   return (
     <address className="text-white not-italic flex flex-row items-center">
-      <span className="pr-1 py-6">jamielockie@gmail.com</span>
+      <span className="pr-1">jamielockie@gmail.com</span>
       <button
         onClick={() => {
           navigator.clipboard.writeText("jamielockie@gmail.com");
