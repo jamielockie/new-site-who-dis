@@ -22,7 +22,7 @@ export const Email = () => {
   };
 
   return (
-    <address className="text-white not-italic flex flex-row items-center">
+    <address className="flex-row text-white not-italic flex flex-wrap items-center">
       <span className="pr-1">jamielockie@gmail.com</span>
       <button
         onClick={() => {
@@ -30,7 +30,7 @@ export const Email = () => {
           setEmailCopied(true);
           setTimesCopied(timesCopied > 5 ? 2 : timesCopied + 1);
         }}
-        className="p-1 rounded-md hover:bg-primary transition-colors duration-300"
+        className="p-1 rounded-md hover:bg-primary transition-colors duration-300 mr-2"
       >
         <svg
           fill="none"
@@ -52,7 +52,7 @@ export const Email = () => {
         <span className="sr-only">Copy Email</span>
       </button>
       <p
-        className={`transition duration-300 px-2 italic ${
+        className={`transition duration-300 italic ${
           isEmailCopied ? "opacity-100" : "opacity-0"
         }`}
       >

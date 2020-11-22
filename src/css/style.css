@@ -38,10 +38,6 @@ a {
   min-height: 65vh;
 }
 
-.bg-gray-gradient {
-  background: linear-gradient(to top, theme('colors.gray.300'), #fff)
-}
-
 .bg-blue-gradient {
   background: linear-gradient(to bottom, theme('colors.primary'), theme('colors.primaryDark'))
 }

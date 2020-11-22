@@ -3,14 +3,9 @@ import React from "react";
 import SEO from "../components/seo";
 import { Waves } from "../components/waves";
 import { Email } from "../components/email";
-
-import { differenceInDays } from "date-fns";
+import { generateCountdownString } from "../utils";
 
 function IndexPage(props) {
-  const countdownTimer = () => {
-    return differenceInDays(new Date(), new Date(2017, 8, 27));
-  };
-
   return (
     <React.Fragment>
       <SEO
@@ -30,7 +25,7 @@ function IndexPage(props) {
           for a few years, now.
         </h2>
         <small className="text-lg block font-semibold tracking-normal leading-snug text-gray-900">
-          {countdownTimer()} days, in fact.
+          {generateCountdownString(new Date(2017, 10, 21))}, in fact!
         </small>
       </section>
       <Waves fill="hsl(204deg 100% 50%)" className="full-bleed z-10" />
@@ -88,7 +83,7 @@ function IndexPage(props) {
               I created it using Gatsby (💨) and Tailwind CSS (💅).
             </p>
 
-            <p>
+            <p className="pb-10">
               If you'd like to get in touch, all you have to do is{" "}
               <s className="italic">smash that like button</s> grab my email
               below, and give me a shout (just don't copy it more than once 😏).
