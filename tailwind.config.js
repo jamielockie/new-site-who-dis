@@ -7,9 +7,10 @@ module.exports = {
     },
     extend: {
       spacing: {
-        "72": "18rem",
-        "84": "21rem",
-        "96": "24rem",
+        "64": "320px",
+        "72": "420px",
+        "84": "480px",
+        "96": "520px",
       },
       colors: {
         primary: "hsl(204deg 100% 50%)",

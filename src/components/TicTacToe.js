@@ -1,48 +1,36 @@
 import React, { useState, useEffect } from "react";
 import * as _ from "lodash";
 
+import { motion } from "framer-motion";
+import { winningCombos, initialBoard, boardNames } from "../constants";
+
 export default function TicTacToe() {
-  const winningCombos = [
-    // Horizontal
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    // Vertical
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    // Diagonal
-    [0, 4, 8],
-    [2, 4, 6],
-  ];
-
-  const initialBoard = [
-    undefined,
-    undefined,
-    undefined,
-    undefined,
-    undefined,
-    undefined,
-    undefined,
-    undefined,
-    undefined,
-  ];
-
-  const boardNames = [
-    "Top Left",
-    "Top Middle",
-    "Top Right",
-    "Center Left",
-    "Center Middle",
-    "Center Right",
-    "Bottom Left",
-    "Bottom Middle",
-    "Bottom Right",
-  ];
-
   const [board, setBoard] = useState(initialBoard);
   const [winner, setWinner] = useState(undefined);
   const [winningSequence, setWinningSequence] = useState(undefined);
+
+  const BoardAnimation = {
+    initial: "hidden",
+    animate: "visible",
+    variants: {
+      hidden: {
+        scale: 0,
+        transition: {
+          when: "afterChildren",
+        },
+      },
+      visible: {
+        scale: 1,
+        transition: {
+          when: "beforeChildren",
+          delay: 0.5,
+          duration: 0.8,
+          type: "spring",
+          staggerChildren: 0.1,
+        },
+      },
+    },
+  };
 
   const getSquaresForPlayer = (board, player) => {
     return _.filter(
@@ -212,35 +200,48 @@ export default function TicTacToe() {
         <s className="text-primary">
           <span className="text-gray-900">artificial intelligence</span>
         </s>{" "}
-        JavaScript functions! Go ahead — It's your move.
+        JavaScript functions!{" "}
       </h2>
       <div className="flex flex-col justify-center items-center mb-12">
         <button
-          className="bg-primaryDark mb-4 hover:bg-primary text-white font-bold mt-6 py-2 px-4 rounded tracking-wider"
+          className="bg-primaryDark mb-4 hover:bg-primary text-white font-bold mt-6 py-2 px-4 rounded tracking-widest"
           onClick={() => {
             setBoard(initialBoard);
             setWinner(undefined);
             setWinningSequence(undefined);
           }}
         >
-          reset
+          Reset
         </button>
+        <motion.span
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            delay: 3,
+            type: "spring",
+          }}
+          initial={{ y: -100, opacity: 0 }}
+          className="inline-block text-1xl sm:text-2xl font-semibold tracking-normal leading-snug text-gray-900 mb-2"
+        >
+          Go ahead — It's your move.
+        </motion.span>
         <div className=" p-4 sm:p-4 md:p-12 lg:p-16  bg-gray-300 border-dashed border-gray-400 border-2 rounded-lg ">
           <div className="w-64 h-64 md:w-72 md:h-72 lg:w-96 lg:h-96 -mr-px">
-            <div className="board-wrapper">
+            <motion.div {...BoardAnimation} className="board-wrapper">
               {_.map(board, (value, index) => {
                 const hasSquareBeenPlayed = !!board[index];
-                const isSquareAWinningMove = _.includes(
-                  winningSequence || [],
-                  index
-                );
+                const isSquareAWinningMove =
+                  _.includes(winningSequence || [], index) || winner === "Cat";
                 // const isSquareAWinningMove = true;
                 return (
-                  <button
+                  <motion.button
                     className={`square ${
                       hasSquareBeenPlayed || winner ? "pointer-events-none" : ""
                     }`}
                     key={index}
+                    variants={{
+                      hidden: { scale: 0, rotate: 45 },
+                      visible: { scale: 1, rotate: 0 },
+                    }}
                     aria-label={boardNames[index]}
                     /** To disable click while keeping read option for a11y*/
                     readOnly={hasSquareBeenPlayed || winner}
@@ -328,10 +329,10 @@ export default function TicTacToe() {
                     >
                       {board[index]}
                     </span>
-                  </button>
+                  </motion.button>
                 );
               })}
-            </div>
+            </motion.div>
           </div>
         </div>
         <p
