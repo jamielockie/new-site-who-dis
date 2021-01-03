@@ -76,3 +76,7 @@ a {
 .move {
   transition: all 0.5s ease-in;
 }
+
+.first-letter:first-letter {
+  text-transform:capitalize
+}

@@ -24,7 +24,7 @@ function IndexPage(props) {
           </strong>{" "}
           for a few years, now.
         </h2>
-        <small className="text-lg block font-semibold tracking-normal leading-snug text-gray-900">
+        <small className="first-letter text-lg block font-semibold tracking-normal leading-snug text-gray-900">
           {generateCountdownString(new Date(2017, 10, 21))}, in fact!
         </small>
       </section>
@@ -80,7 +80,7 @@ function IndexPage(props) {
 
             <p className="pb-10">
               {" "}
-              I created it using Gatsby (💨) and Tailwind CSS (💅).
+              I created it using Gatsby ( 💨 ) and Tailwind CSS ( 💅 ).
             </p>
 
             <p className="pb-10">

@@ -222,7 +222,7 @@ export default function TicTacToe() {
           initial={{ y: -100, opacity: 0 }}
           className="inline-block text-1xl sm:text-2xl font-semibold tracking-normal leading-snug text-gray-900 mb-2"
         >
-          Go ahead — It's your move.
+          {winner ? getWinnerCopy(winner) : "Go ahead — It's your move"}
         </motion.span>
         <div className=" p-4 sm:p-4 md:p-12 lg:p-16  bg-gray-300 border-dashed border-gray-400 border-2 rounded-lg ">
           <div className="w-64 h-64 md:w-72 md:h-72 lg:w-96 lg:h-96 -mr-px">
@@ -339,7 +339,7 @@ export default function TicTacToe() {
           className={`inline text-2xl mt-1 font-normal tracking-wide leading-snug pb-4 text-gray-900
             ${winner ? "opacity-100" : "opacity-0"}`}
         >
-          {getWinnerCopy(winner)}
+          {}
         </p>
       </div>
     </div>
